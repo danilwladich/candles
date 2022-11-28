@@ -95,6 +95,10 @@ h6 {
   /* Слайдер с точками */
 }
 /* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
 /* Лента слайдов */
 .slick-track {
   display: -webkit-box;
@@ -128,7 +132,6 @@ body {
   font-family: "Rubik", sans-serif;
   background-color: #fff2ec;
   text-transform: lowercase;
-  overflow-x: hidden;
 }
 body.lock {
   overflow: hidden;
