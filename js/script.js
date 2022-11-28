@@ -75,6 +75,34 @@ const header = document.querySelector('.header');
 burgerButton.onclick = burgerMenuToggle;
 $('.header__link').click(burgerMenuRemove);
 
+const animatedItems = document.querySelectorAll('.animated-item');
+if (animatedItems.length > 0) {
+	window.addEventListener('scroll', animateOnScroll);
+	function animateOnScroll() {
+		for (let index = 0; index < animatedItems.length; index++) {
+			const animatedItem = animatedItems[index];
+			const animatedItemHeight = animatedItem.offsetHeight;
+			const animatedItemOffsetTop = offsetTop(animatedItem);
+			const animatedStart = 4;
+
+			let animatedItemPoint = window.innerHeight - animatedItemHeight / animatedStart;
+			if (animatedItemHeight > window.innerHeight) {
+				animatedItemPoint = window.innerHeight - window.innerHeight / animatedStart;
+			}
+
+			if ((pageYOffset > animatedItemOffsetTop - animatedItemPoint) && pageYOffset < (animatedItemOffsetTop + animatedItemHeight)) {
+				animatedItem.classList.add('animate');
+			}
+		}
+	}
+	function offsetTop(el) {
+		const rect = el.getBoundingClientRect();
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return rect.top + scrollTop;
+	}
+	animateOnScroll();
+};
+
 slider();
 function slider() {
 	$('.slider').slick({

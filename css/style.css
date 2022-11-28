@@ -162,6 +162,22 @@ body.lock {
   }
 }
 
+.animated-item {
+  opacity: 0;
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.animated-item.animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .header {
   z-index: 50;
   position: fixed;
@@ -676,7 +692,7 @@ main {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rgba(255, 255, 255, 0.37);
   opacity: 0;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -689,7 +705,7 @@ main {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  color: #fff2ec;
+  color: #000;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
