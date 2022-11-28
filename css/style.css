@@ -131,13 +131,11 @@ h6 {
 html {
   min-height: calc(100% + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
-body {
-  font-family: "Rubik", sans-serif;
   background-color: #f0d5ce;
+  font-family: "Rubik", sans-serif;
   text-transform: lowercase;
 }
+
 body.lock {
   overflow: hidden;
 }
