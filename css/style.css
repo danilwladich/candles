@@ -130,7 +130,7 @@ h6 {
 }
 body {
   font-family: "Rubik", sans-serif;
-  background-color: #fff2ec;
+  background-color: #f0d5ce;
   text-transform: lowercase;
 }
 body.lock {
@@ -139,6 +139,10 @@ body.lock {
 
 .wrapper {
   min-height: 100vh;
+}
+
+.content {
+  background-color: #fff2ec;
 }
 
 .container {
