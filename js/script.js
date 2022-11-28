@@ -33,7 +33,8 @@ function headerScroll() {
 		const topDefault = 40;
 		const translate = topDefault - (topDifference / windowHeight * $(window).scrollTop());
 		$('.header').css('top', translate);
-	} else {
+	};
+	if ($(window).scrollTop() >= windowHeight) {
 		$('.header').css('top', '10px');
 	};
 	if ($(this).scrollTop() >= 0 && $(this).scrollTop() < windowHeight / 2.3) {
