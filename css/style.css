@@ -128,6 +128,11 @@ h6 {
   /* Активная точка */
   /* Элемент точки */
 }
+html {
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: #f0d5ce;
@@ -693,6 +698,7 @@ main {
 }
 
 .footer {
+  background-color: #fff2ec;
   padding: 75px 0;
   font-size: 16px;
   line-height: 150%;
