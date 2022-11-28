@@ -1,7 +1,7 @@
-let windowHeight = document.documentElement.clientHeight;
+let windowHeight = window.innerHeight;
 window.addEventListener('resize', resizeWindowHeight);
 function resizeWindowHeight() {
-	windowHeight = document.documentElement.clientHeight;
+	windowHeight = window.innerHeight;
 };
 let windowWidth = document.documentElement.clientWidth;
 window.addEventListener('resize', resizeWindowWidth);
