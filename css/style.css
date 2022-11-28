@@ -151,14 +151,14 @@ body.lock {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 calc(30px + env(safe-area-inset-right)) 0 calc(30px + env(safe-area-inset-left));
 }
 .container.small {
   max-width: 500px;
 }
 @media (max-width: 767px) {
   .container {
-    padding: 0 15px;
+    padding: 0 calc(15px + env(safe-area-inset-right)) 0 calc(15px + env(safe-area-inset-left));
   }
 }
 
