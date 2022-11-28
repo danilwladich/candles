@@ -1,12 +1,12 @@
-let windowHeight = window.innerHeight;
+let windowHeight = Math.min(window.innerHeight, document.documentElement.clientHeight);
 window.addEventListener('resize', resizeWindowHeight);
 function resizeWindowHeight() {
-	windowHeight = window.innerHeight;
+	windowHeight = Math.min(window.innerHeight, document.documentElement.clientHeight);
 };
-let windowWidth = document.documentElement.clientWidth;
+let windowWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
 window.addEventListener('resize', resizeWindowWidth);
 function resizeWindowWidth() {
-	windowWidth = document.documentElement.clientWidth;
+	windowWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
 	if (windowWidth < 767) {
 		slider();
 	};
