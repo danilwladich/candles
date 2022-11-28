@@ -27,6 +27,9 @@ function headerScroll() {
 			const opacity = opacityDefault - (opacityDifference / windowHeight * 2.3 * $(window).scrollTop());
 			$('.main-screen__text').css('opacity', opacity);
 		};
+		if ($(this).scrollTop() >= windowHeight) {
+			$('.header').css('top', '10px');
+		};
 	})
 	if ($(window).scrollTop() >= 0 && $(window).scrollTop() < windowHeight) {
 		const topDifference = 30;
