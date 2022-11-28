@@ -1,5 +1,16 @@
-const windowHeight = window.innerHeight;
-const windowWidth = window.innerWidth;
+let windowHeight = document.documentElement.clientHeight;
+window.addEventListener('resize', resizeWindowHeight);
+function resizeWindowHeight() {
+	windowHeight = document.documentElement.clientHeight;
+};
+let windowWidth = document.documentElement.clientWidth;
+window.addEventListener('resize', resizeWindowWidth);
+function resizeWindowWidth() {
+	windowWidth = document.documentElement.clientWidth;
+	if (windowWidth < 767) {
+		slider();
+	};
+};
 
 headerScroll();
 function headerScroll() {
@@ -64,7 +75,8 @@ const header = document.querySelector('.header');
 burgerButton.onclick = burgerMenuToggle;
 $('.header__link').click(burgerMenuRemove);
 
-if (windowWidth < 767) {
+slider();
+function slider() {
 	$('.slider').slick({
 		arrows: false,
 		dots: false,
@@ -73,5 +85,12 @@ if (windowWidth < 767) {
 		waitForAnimate: false,
 		autoplay: true,
 		autoplaySpeed: 3500,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: "unslick"
+			}
+		],
+		mobileFirst: true,
 	});
-};
+}
