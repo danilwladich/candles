@@ -130,6 +130,7 @@ h6 {
 }
 html {
   min-height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
   background-color: #f0d5ce;
   font-family: "Rubik", sans-serif;
   text-transform: lowercase;
@@ -450,11 +451,11 @@ body.lock {
 .main-screen {
   z-index: 49;
   position: relative;
-  padding: env(safe-area-inset-top) 0px 100vh 0px;
+  padding: 0px 0px 100vh 0px;
 }
 .main-screen__bg img {
   width: 100%;
-  height: calc(100% + env(safe-area-inset-top));
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
