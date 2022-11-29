@@ -450,11 +450,11 @@ body.lock {
 .main-screen {
   z-index: 49;
   position: relative;
-  padding: 0px 0px 100vh 0px;
+  padding: env(safe-area-inset-top) 0px 100vh 0px;
 }
 .main-screen__bg img {
   width: 100%;
-  height: 100%;
+  height: calc(100% + env(safe-area-inset-top));
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
