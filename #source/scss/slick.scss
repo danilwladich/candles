@@ -1,0 +1,59 @@
+/* Слайдер */
+.slick-slider {
+	/* Слайдер запущен */
+	&.slick-initialized {
+	}
+	/* Слайдер с точками */
+	&.slick-dotted {
+	}
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+/* Слайд */
+.slick-slide {
+	/* Слайд активный (показывается) */
+	&.slick-active {
+	}
+	/* Слайд основной */
+	&.slick-current {
+	}
+	/* Слайд по центру */
+	&.slick-center {
+	}
+	/* Клонированный слайд */
+	&.slick-cloned {
+	}
+}
+/* Стрелка */
+.slick-arrow {
+	/* Стрелка влево */
+	&.slick-prev {
+	}
+	/* Стрелка вправо */
+	&.slick-next {
+	}
+	/* Стрелка не активная */
+	&.slick-disabled {
+	}
+}
+
+/* Точки (булиты) */
+.slick-dots {
+	li {
+		/* Активная точка */
+		&.slick-active {
+		}
+		/* Элемент точки */
+		button {
+		}
+	}
+}
